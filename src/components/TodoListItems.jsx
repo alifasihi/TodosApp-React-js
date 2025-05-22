@@ -2,7 +2,7 @@ import { useState } from "react";
 import DeleteBtn from "./ui/DeleteBtn";
 import EditBtn from "./ui/EditBtn";
 
-export default function TodoListItems({todo,deleteTodo,toggleTodoStaus,editTodoTitle}) {
+export default function TodoListItems({todo,deleteTodo,toggleTodoStatus,editTodoTitle}) {
 
    const [editMode,setEditMode]=useState(false)
 
@@ -28,7 +28,7 @@ export default function TodoListItems({todo,deleteTodo,toggleTodoStaus,editTodoT
                  (
                   <div className="flex items-center">
                     <div className="flex items-center">
-                      <input type="checkbox" checked={todo?.status ? true:false} onChange={()=>toggleTodoStaus(todo)} />
+                      <input type="checkbox" checked={todo?.status ? true:false} onChange={()=>toggleTodoStatus(todo)} />
                       <p className={`ml-3 text-gray-700  ${todo?.status ?'line-through':''}`}>{todo?.title}</p>
                     </div>
                     <div className="flex space-x-2">

@@ -47,7 +47,7 @@ export default function Todos() {
     setTodos(newTodos)
   }
 
-  const toggleTodoStausHandler=(todo)=>{
+  const toggleTodoStatusHandler=(todo)=>{
 
     let newTodos=todos.map((todoItem)=>{
       if (todo.id===todoItem.id) {
@@ -87,7 +87,7 @@ export default function Todos() {
           />
         </div>
 
-        <TodoList todos={todos} deleteTodo={deleteTodoHandler} toggleTodoStaus={toggleTodoStausHandler} editTodoTitle={editTodoTitleHandler}/>
+        <TodoList todos={todos} deleteTodo={deleteTodoHandler} toggleTodoStatus={toggleTodoStatusHandler} editTodoTitle={editTodoTitleHandler}/>
       </div>
     </>
   )
